@@ -9,10 +9,15 @@
   <body>
     <div id="app-4">
       <ol>
-        <li v-for="todo in todos">
-          {{ todo.text }}
+        <li v-for="todo in todos" v-if=" (todo.age > 15) ">
+          {{ todo.name }} -> {{ todo.text }} -> {{ todo.age }}
         </li>
       </ol>
+    </div>
+    <div>
+      <button v-on="click:me">
+        v-on="click:me"
+      </button>
     </div>
 
     <script src="src/index.js"></script>
