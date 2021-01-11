@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .myClassName{
+            background-color: brown;
+        }
+    </style>
 </head>
 <body>
     <div id="chapter2">
@@ -13,7 +18,21 @@
     </ul>
 
         <input type="text" v-model="newName">
-        <button @click="addName">Add New Name</button>
+        <button title="" @click="addName">Add New Name</button>
+    
+    <button :title="buttonTitle" :class="myClass" @click="changeClass">Hover Me</button>
+
+    
+    <div>
+        <br>
+        <button @click="togglePeragraph">
+            Toggle
+        </button>
+    <div v-if="toggle">
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis illum ut tenetur quae magnam quis voluptates obcaecati quo excepturi nihil voluptate delectus nulla esse maxime, totam, nostrum, modi odio. Tempore. </p>
+    </div>
+</div>
+
     </div>
 
     <!-- Veujs Framwork js cdn -->
