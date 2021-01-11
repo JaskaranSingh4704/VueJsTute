@@ -1,6 +1,15 @@
 new Vue({
-    el:'#chapter1',
-    data:{
-        message:"this is message",
-    }
-    })
+  el: "#chapter2",
+  data: {
+    newName: "",
+    names: ["jas", "simran", "manu"],
+  },
+
+  methods: {
+    addName() {
+        if(this.newName !== ""){
+            this.names.push(this.newName)
+        }
+    },
+  },
+});

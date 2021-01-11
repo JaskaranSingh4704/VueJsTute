@@ -6,10 +6,14 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="chapter2">
+    
+    <ul>
+        <li v-for="name in names" v-text="name"></li>
+    </ul>
 
-    <div id="chapter1">
-        <input type="text" v-model="message">
-        <p>First Chapter : {{ message }}</p>
+        <input type="text" v-model="newName">
+        <button v-on:click="addName">Add New Name</button>
     </div>
 
     <!-- Veujs Framwork js cdn -->
