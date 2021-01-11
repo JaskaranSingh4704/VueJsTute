@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        .myClassName{
-            background-color: brown;
-        }
+      .myClassName {
+        background-color: brown;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div id="chapter2">
-    
-    <ul>
+      <ul>
         <li v-for="name in names" v-text="name"></li>
-    </ul>
+      </ul>
 
-        <input type="text" v-model="newName">
-        <button title="" @click="addName">Add New Name</button>
-    
-    <button :title="buttonTitle" :class="myClass" @click="changeClass">Hover Me</button>
+      <input type="text" v-model="newName" />
+      <button title="" @click="addName">Add New Name</button>
 
-    
-    <div>
-        <br>
-        <button @click="togglePeragraph">
-            Toggle
-        </button>
-    <div v-if="toggle">
-        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis illum ut tenetur quae magnam quis voluptates obcaecati quo excepturi nihil voluptate delectus nulla esse maxime, totam, nostrum, modi odio. Tempore. </p>
-    </div>
-</div>
+      <button :title="buttonTitle" :class="myClass" @click="changeClass">
+        Hover Me
+      </button>
 
+      <div>
+        <br />
+        <button @click="togglePeragraph">Toggle</button>
+        <div v-if="toggle">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+            illum ut tenetur quae magnam quis voluptates obcaecati quo excepturi
+            nihil voluptate delectus nulla esse maxime, totam, nostrum, modi
+            odio. Tempore.
+          </p>
+        </div>
+      </div>
     </div>
 
     <!-- Veujs Framwork js cdn -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 
     <script src="chapter1.js"></script>
-</body>
+  </body>
 </html>
