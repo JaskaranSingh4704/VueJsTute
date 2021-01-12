@@ -1,24 +1,43 @@
 new Vue({
   el: "#chapter2",
   data: {
-    buttonTitle: "this is javascript button title",
-    newName: "",
-    names: ["jas", "simran", "manu"],
-    myClass: "",
-    toggle :true,
+      tasks:[
+        {
+          taskName:'Go To school',
+          isCompleted:true
+        },
+        {
+          taskName:'Go To Office',
+          isCompleted:false
+        },
+        {
+          taskName:'Go To Town',
+          isCompleted:true
+        },
+        {
+          taskName:'Go To Work',
+          isCompleted:false
+        },
+        {
+          taskName:'Go To heaven',
+          isCompleted:true
+        },
+      ]
   },
 
   methods: {
-    addName() {
-      if (this.newName !== "") {
-        this.names.push(this.newName);
-      }
-    },
-    changeClass() {
-      this.myClass = "myClassName";
-    },
-    togglePeragraph(){
-        this.toggle = !this.toggle
-    }
+
   },
+  computed:{
+    completedTasks(){
+      return this.tasks.filter((task)=>{
+        return task.isCompleted;
+      })
+    },
+    unCompletedTasks(){
+      return this.tasks.filter((task)=>{
+        return !task.isCompleted;
+      })
+    }
+  }
 });

@@ -12,30 +12,20 @@
   </head>
   <body>
     <div id="chapter2">
+      <h2>All Task</h2>
       <ul>
-        <li v-for="name in names" v-text="name"></li>
+        <li v-for="task in tasks" v-text="task.taskName" ></li>
       </ul>
 
-      <input type="text" v-model="newName" />
-      <button title="" @click="addName">Add New Name</button>
+      <h2>All Completed Task</h2>
+      <ul>
+        <li v-for="task in completedTasks" v-text="task.taskName" ></li>
+      </ul>
 
-      <button :title="buttonTitle" :class="myClass" @click="changeClass">
-        Hover Me
-      </button>
-
-      <div> 
-          <br />
-          <h5>Toggle button</h5>
-        <button @click="togglePeragraph">Toggle</button>
-        <div v-if="toggle">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-            illum ut tenetur quae magnam quis voluptates obcaecati quo excepturi
-            nihil voluptate delectus nulla esse maxime, totam, nostrum, modi
-            odio. Tempore.
-          </p>
-        </div>
-      </div>
+      <h2>All UnCompleted Task</h2>
+      <ul>
+        <li v-for="task in unCompletedTasks" v-text="task.taskName" ></li>
+      </ul>
     </div>
 
     <!-- Veujs Framwork js cdn -->
